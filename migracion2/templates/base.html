@@ -1,0 +1,90 @@
+{% block "head" %}
+{% load static %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE>Subsidio de transporte a personas en condición de discapacidad</TITLE>
+<link rel="shortcut icon" href="{% static "img/favicon.ico" %}">   
+<link rel="stylesheet" type="text/css" href="{% static "css/global.css" %}" />
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:500,600,400italic,500italic' rel='stylesheet' type='text/css'>
+
+<META NAME="Generator" CONTENT="TextPad 4.6">
+<META NAME="Author" CONTENT="?">
+<META NAME="Keywords" CONTENT="?">
+<META NAME="Description" CONTENT="?">
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35894534-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<style type="text/css">
+    ul.errorlist li{
+      color: #900;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script type="text/javascript">
+  $( window ).ready(function() {
+    if(self == top){
+       console.log('Not Iframe');  
+    }
+    else {
+       console.log('iframe');
+       $("#tl_BannerInt").hide();
+       $("#tl_logos").hide();
+    }
+  });
+</script>
+</HEAD>
+{% endblock %}
+
+{% block body %}
+<BODY>
+
+{% block header %}
+ <div id="tl_BannerInt"><a href="http://www.tullaveplus.com"><img src="{% static "img/banner.jpg" %}" ALT="www.tullaveplus.com/discapacidad"/></a></div> 
+{% endblock %}
+
+{% block menu %}
+    <div id="tl_menuInt">
+       <ul style="margin: 43px 32px 20px 0;">
+        <li style="width: 158px;"><a href="https://tutorial.djangogirls.org/es/django_views/"><img src="{% static "img/btn_faq.jpg" %}" /></a></li>
+        <li style="width: 158px;"><a href="https://tutorial.djangogirls.org/es/django_views/"><img src="{% static "img/btn_cita.jpg" %}" /></a></li> 
+       </ul>
+    </div>
+    <div class="clearfix"></div>
+{% endblock %}
+
+
+{% block content %}
+{% endblock %}
+
+{% block footer %}
+<div id="tl_logos">
+  <a href="https://recaudobogota.rbsas.co/" target="_blank">
+    <img style="margin-left: 1px;" src="{% static "img/LOGORB4.png" %}" width="500" height="54">
+  </a>
+  <a href="http://www.transmilenio.gov.co" target="_blank">
+    <img style="margin-left: 60px;" src="{% static "img/banner_transmilenio.png" %}"alt="" width="74" height="54"> 
+  </a>
+  <ul id="tl_menu_secundario" style="width: 270px;">
+    <li><a href="https://tullaveplus.gov.co/web/guest/quienes-somos">Información Institucional</a></li>
+    <li><a href="https://www.tullaveplus.gov.co/web/guest/canales-de-comunicacion">Contáctenos</a></li>
+    <li><a href="https://www.tullaveplus.gov.co/web/guest/preguntas-frecuentes">FAQ's</a></li>
+    <li><a href="https://www.tullaveplus.gov.co/web/guest/noticias">Noticias</a></li>
+    <li><a href="https://www.tullaveplus.gov.co">Mapa del sitio </a></li>
+  </ul>
+</div>
+{% endblock %}
+
+</BODY>
+{% endblock %}
+</HTML>

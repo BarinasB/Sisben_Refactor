@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+label.tl_conditions{
+	float: none;
+	margin: 0 0 0 0;
+	width: inherit;
+}
+
+input#toogle_win {
+   position: absolute;
+   top: -9999px;
+   left: -9999px;
+}
+
+input#toogle_win:checked + .modal {
+ 	z-index: 2000;
+	display: block;
+}
+
+.modal {
+	width: 100%; 
+	height:100%; 
+	background-color: rgba(50, 50, 50, 0.5); 
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	z-index: -2000;
+
+	display: none;
+
+	-webkit-transition: opacity 1s ease;
+	-moz-transition: opacity 1s ease;
+	-ms-transition: opacity 1s ease;
+	transition: opacity 1s ease;
+}
+
+.modal #dialog {
+	width: 65%;
+	height: 60%;
+	background-color: #FFF;
+	margin: 10% auto;
+	border-radius: 10px;
+	padding: 5px 5px 5px 5px;
+
+	-webkit-box-shadow: 10px 10px 20px #222;
+	-moz-box-shadow: 10px 10px 20px #222;
+	-ms-box-shadow: 10px 10px 20px #222;
+	box-shadow: 10px 10px 20px #222;
+}
+
+.modal #dialog iframe{
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+.modal .close{
+	width: 24px;
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	top: 120px;
+	right: 230px;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-webkit-box-shadow: 3px 4px 5px #000;
+	-moz-box-shadow: 3px 4px 5px #000;
+	box-shadow: 3px 4px 5px #000;
+	float: none;
+	margin: 0 0 0 0;
+}

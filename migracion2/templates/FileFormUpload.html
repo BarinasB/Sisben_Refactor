@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<script language="javascript">
+	  function check(form, archivo)
+	  {
+	     if (!archivo)
+                {
+			alert('Seleccione un archivo');
+		}
+	     else{
+			extension = (archivo.substring(archivo.lastIndexOf("."))).toLowerCase();
+			if(extension!=".txt" && extension!=".csv"){
+				alert('Archivo en formato no válido (txt, csv)');
+			}
+			else{
+				document.getElementById('est_proceso').innerHTML='<b>Proceso iniciado,  puede tardar varios minutos</b>';
+				form.submit(); 
+			}
+		}
+	  
+	  }
+	function reset()
+	{
+		document.getElementById("formu").reset();
+	}
+</script>
+
+<div id="tl_content">
+    <div id="tl_Intleft">
+		<form method="post" name="formu" enctype="multipart/form-data" action="{% url 'genfile' %}">
+			{% csrf_token %}
+			{{ formUpFile.as_p }} 
+			<p>
+				<label>&nbsp;</label>
+	    		<input type="button" name="Upload" value="Cargar" onclick="check(this.form, this.form.file.value)" />
+	    		<input type="button" name="Borrar" value="Borrar" onclick="reset()" />
+			</p>
+		</form><br><br>
+		<div id='est_proceso'></div>
+		{% if not filePath  %}
+			<script language="javascript">
+				document.getElementById('est_proceso').innerHTML='<b>Proceso finalizado</b>';
+			</script>
+		<p>
+			<br><br>
+			Cantidad de registros procesados:  {{ regFile }} <br><br>
+			Cantidad de registros procesados con éxito:  {{ nombFile }} <br><br>
+			<a href="/discapacidad/static/df.pdf" download="a">Descargar Archivo de salida </a>
+			
+		</p>
+		{% endif %}
+    </div>
+</div>
+
+{% endblock %}

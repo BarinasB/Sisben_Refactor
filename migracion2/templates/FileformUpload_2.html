@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<script language="javascript">
+	  function check(form, id_kind_document,id_document)
+	  {
+	     if (id_kind_document,id_document=="")
+                {
+			alert('Ingrese un numero de documento');
+		}
+	     else if (id_kind_document==""){
+			alert('Seleccion un tipo de documento');
+		}
+   	     else{
+		     	document.getElementById('est_proceso').innerHTML='<b>Realizando Consulta,  puede tardar varios minutos</b>';
+			form.submit(); 
+	     }
+	  
+	  }
+	function reset()
+	{
+		document.getElementById("formu").reset();
+	}
+</script>
+
+
+<div id="tl_content">
+    <div id="tl_Intleft">
+<h1>
+	Por favor, digite la identificación
+</h1>
+<br>
+<br>
+
+		<form method="post" name="formu" enctype="multipart/form-data" action="{% url 'genfile' %}">
+			<p align="left">
+			{% csrf_token %}
+			{{ formUpFile.as_p }}
+			</p>
+			<p>
+				<label>&nbsp;</label>
+	    		<input type="button" name="Consultar" value="Consultar" onclick="check(this.form, this.form.genfile.value)" />
+	    		<input type="button" name="Limpiar" value="Limpiar" onclick="reset()" />
+			</p>
+		</form><br><br>
+		<div id='est_proceso'></div>
+		{% if not filePath  %}
+			<script language="javascript">
+				document.getElementById('est_proceso').innerHTML='<b>Resultado</b>';
+			</script>
+		
+			<br><br>
+
+		{% if nombFile %}
+		<table border="0" cellspacing="4" width="80%">
+			<tr>
+               			<td align="center">Tipo Documento</td>
+                		<td align="center">Numero Documento</td>
+                		<td align="center">Nombres</td>
+                		<td align="center">Apellidos</td>
+			<tr>
+    			{% for pers in nombFile %}
+       			<tr>
+               			<td align="center"> {{ pers.tipodocumento_idtipodocumento.desc }}</td>
+                		<td align="center"> {{ pers.documen }}</td>
+                		<td align="center"> {{ pers.nom1 }} &nbsp; {{ pers.nom2 }}</td>
+                		<td align="center"> {{ pers.ape1 }} &nbsp; {{ pers.ape2 }}</td>
+        		</tr>
+    			{% endfor %}
+		{% else %}
+        		<tr>
+                		<td></td>
+        		</tr>
+		{% endif %}
+
+		</table>
+
+		<br>
+		<div>
+			{{ RegFile }}
+		{% endif %}
+
+                {% if link %}
+                        <a href="{{ link }}" target="blank">Registrar Usuario </a>
+                {% endif %}
+		</div>		
+
+    </div>
+</div>
+
+{% endblock %}

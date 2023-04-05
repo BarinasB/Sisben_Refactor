@@ -1,0 +1,191 @@
+{% extends "base.html" %}
+
+{% block "scripts" %}
+  {{ block.super }}
+  <link rel="stylesheet" type="text/css" href="" />
+{% endblock %}
+
+{% block content %}
+<div id="tl_content">
+    <div id="tl_Intleft">
+        {% if show_person_data %}
+        <h1>¿Soy beneficiario?</h1>
+        <br><hr>
+        <p>Usted aparece en el registro de la poblaci&oacute;n SISB&Eacute;N. Por favor lea cuidadosamente las <label for='toogle_win' class="tl_conditions"><a><b>condiciones de uso.</b></a></label> Tenga presente que para adquirir su incentivo SISBEN, ya no se est&aacute; realizando agendamiento. Si ya hab&iacute;a realizado su agendamiento, debe dirigirse al S&uacute;per Cade CAD ubicado en la KR 30 # 25 - 90, con horario de atenci&oacute;n Lunes a Viernes de 7:00 am a 5:30 pm y S&aacute;bado 8:00 am a 12:00 am.</p>
+        <br><br>
+        <script>
+        function wrong() {
+
+          document.getElementById('confirm_form').onsubmit = function() {
+            var txt = document.getElementById('id_confirm');
+            txt.value = "False";
+          };
+        };
+        </script>
+        <!-- Condiciones de uso -->
+        <!--form action="{% url 'data-confirm' %}" method="POST" id="confirm_form">
+            {% csrf_token %}
+            {{ confirmation_form.as_p }}
+            <input type="submit" value="Si acepto las condiciones" size="20" onclick="check();">
+            <input type="submit" value="No acepto las condiciones" size="20" onclick="wrong();">
+        </form-->
+        <input type='checkbox' id='toogle_win' name='toogle_win'>
+        <div class="modal">
+            <div id='dialog'>
+                <label for='toogle_win' class='close'>X</label>
+                <iframe src="/conditions/"></iframe>
+            </div>
+        </div>
+        {% else %}
+            {% if MSG_HHC %}
+                {% if not MSG_PIO and not MSG_UPI %}
+                    <hr>
+                    <p><font color="AA0000">Respetado usuario, usted se encuentra registrado en la base de datos del SISB&Eacute;N para el beneficio de transporte, pero usted ya cuenta con una Tarjeta Personalizada  &lt;&lt;Adulto Mayor&gt;&gt; o  &lt;&lt;Discapacidad&gt;&gt;. Por esta razón, si desea hacer el cambio de su tarjeta, acérquese a uno de nuestros <a href="http://www.tullaveplus.com/web/public/puntos-de-personalizacion" target="none"><b>puntos de personalizaci&oacute;n</b></a> presentando su documento de identidad y tarjeta Tullaveplus.</font></p><br><br>
+                    <hr>
+                    <br><br>
+                    <p><span><a id="b_back" href="{% url 'index' %}">Volver al Inicio</a></span></p>
+                {% else %}
+                    <hr>
+                    <p><font color="AA0000">Respetado usuario, usted no se encuentra registrado en la base de datos del SISB&Eacute;N para el beneficio de transporte. Si tiene alguna inquietud adicional acerca de este beneficio, comuníquese a la línea 4824304.</font><p></p>
+                    <br><br>
+                    <hr>
+                    <br><br>
+                    <p><span><a id="b_back" href="{% url 'index' %}">Volver al Inicio</a></span></p>
+                {% endif %}
+            {% endif %}
+            {% if MSG_HPC %}
+                {% if MSG_HPC and MSG_UPI%}
+
+                {% elif not MSG_PIO and not MSG_UPI %}
+                    <hr>
+                    <p><font color="AA0000">Respetado usuario, usted se encuentra registrado en la base de datos del SISB&Eacute;N para el beneficio de transporte, pero usted ya cuenta con una Tarjeta Personalizada  &lt;&lt;Adulto Mayor&gt;&gt; o  &lt;&lt;Discapacidad&gt;&gt;. Por esta razón, si desea hacer el cambio de su tarjeta, acérquese a uno de nuestros <a href="http://www.tullaveplus.com/web/public/puntos-de-personalizacion" target="none"><b>puntos de personalizaci&oacute;n</b></a> presentando su documento de identidad y tarjeta Tullaveplus.</font></p><br><br>
+                    <hr>
+                    <br><br>
+                    <p><span><a id="b_back" href="{% url 'index' %}">Volver al Inicio</a></span></p>
+                {% else %}
+                    <hr>
+                    <p><font color="AA0000">Respetado usuario, usted no se encuentra registrado en la base de datos del SISB&Eacute;N para el beneficio de transporte. Si tiene alguna inquietud adicional acerca de este beneficio, comuníquese a la línea 4824304.</font><p></p>
+                    <br><br>
+                    <hr>
+                    <br><br>
+                    <p><span><a id="b_back" href="{% url 'index' %}">Volver al Inicio</a></span></p>
+                {% endif %}
+            {% endif %}
+            {% if MSG_TAC %}
+                {% if MSG_TAC and not MSG_UPI %}
+                <hr>
+                <br><br><p><font color="AA0000">Respetado usuario, usted ya cuenta con una tarjeta &lt;&lt;Apoyo al Ciudadano&gt;&gt;. Si tiene alguna inquietud adicional acerca de este beneficio, comuníquese a la línea 4824304.</font></p><br><br>
+                <hr>
+                <br><br>
+                <p><span><a id="b_back" href="{% url 'index' %}">Volver al Inicio</a></span></p>
+                {% else %}
+                    <hr>
+                    <br><br><p><font color="AA0000">Respetado usuario, usted no se encuentra registrado en la base de datos del SISB&Eacute;N para el beneficio de transporte. Si tiene alguna inquietud adicional acerca de este beneficio, comuníquese a la línea 4824304 11.</font></p><br><br>
+                    <hr>
+                    <br><br>
+                    <p><span><a id="b_back" href="{% url 'index' %}">Volver al Inicio</a></span></p>
+                {% endif %}
+            {% endif %}
+
+
+            {% if MSG_NOBD %}
+                <hr>
+                <p><font color="AA0000">Respetado usuario, usted no se encuentra registrado en la base de datos del SISB&Eacute;N para el beneficio de transporte. Si tiene alguna inquietud adicional acerca de este beneficio, comuníquese a la línea 4824304.</font></p>
+                <hr>
+                <br><br>
+	        	<p><span><a id="b_back" href="{% url 'index' %}">Volver al Inicio</a></span></p>
+            {% endif %}
+            {% if MSG_PYP %}
+                <p> <font color="AA0000">Respetado usuario, usted no se encuentra registrado en la base de datos del SISB&Eacute;N para el beneficio de transporte. Si tiene alguna inquietud adicional acerca de este beneficio, comuníquese a la línea 4824304.</font></p>
+                <hr>
+                <br><br>
+		        <p><span><a id="b_back" href="{% url 'index' %}">Volver al Inicio</a></span></p>
+            {% endif %}
+            {% if MSG_VHCL %}
+                <p><font color="AA0000">Respetado usuario, usted no se encuentra registrado en la base de datos del SISB&Eacute;N para el beneficio de transporte. Si tiene alguna inquietud adicional acerca de este beneficio, comuníquese a la línea 4824304.</font></p>
+                <hr>
+                <br><br>
+		        <p><span><a id="b_back" href="{% url 'index' %}">Volver al Inicio</a></span></p>
+            {% endif %}
+            {% if MSG_HPC and MSG_UPI%}
+            <hr>
+            <p><font color="AA0000">Respetado usuario, usted no se encuentra registrado en la base de datos del SISB&Eacute;N para el beneficio de transporte. Si tiene alguna inquietud adicional acerca de este beneficio, comuníquese a la línea 4824304..</font><p></p>
+            <br><br>
+            <hr>
+            <br><br>
+            <p><span><a id="b_back" href="{% url 'index' %}">Volver al Inicio</a></span></p>
+            {% endif %}
+
+            {% if MSG_UPI %}
+                {% if MSG_HPC and MSG_UPI%}
+
+                {% elif not MSG_TAC and MSG_UPI %}
+
+                <p><font color="AA0000">Respetado usuario, usted no se encuentra registrado en la base de datos del SISB&Eacute;N para el beneficio de transporte. Si tiene alguna inquietud adicional acerca de este beneficio, comuníquese a la línea 4824304.</font></p>
+                <Br>
+                <br>
+                <hr>
+                <p><span><a id="b_back" href="{% url 'index' %}">Volver al Inicio</a></span></p>
+
+                {% elif MSG_HHC %}
+
+                {% else %}
+                <p><font color="AA0000">Respetado usuario, usted no se encuentra registrado en la base de datos del SISB&Eacute;N para el beneficio de transporte. Si tiene alguna inquietud adicional acerca de este beneficio, comuníquese a la línea 4824304.</font></p>
+                <hr>
+                <br><br>
+                <p><span><a id="b_back" href="{% url 'index' %}">Volver al Inicio</a></span></p>
+                {% endif %}       
+            {% endif %}
+            {% if MSG_UTC %}
+                <hr>
+		<p> <font color="AA0000">Respetado usuario.<br><br> Usted se encuentra <b>activo</b> para el beneficio. Adicionalmente, solicitó una cita para el dia: {{ appointment_date|date:"l j \d\e F" }} a las {{ appointment_date|time:"h:i a" }} en {{ rendezvous }}.
+		{{ fecha_entrega }}</font><p>
+                <hr>
+                <br><br>
+		<p><span><a id="b_back" href="{% url 'index' %}">Volver al Inicio</a></span></p>
+            {% endif %}
+        {% if MSG_PIO %}
+            {% if MSG_HHC %}
+
+            {% else %}
+                <p><font color="AA0000">Respetado usuario, usted no se encuentra registrado en la base de datos del SISB&Eacute;N para el beneficio de transporte. Si tiene alguna inquietud adicional acerca de este beneficio, comuníquese a la línea 4824304.</font><p>
+                <hr>
+		        <br><br>
+                <p><span><a id="b_back" href="{% url 'index' %}">Volver al Inicio</a></span></p>
+            {% endif %}
+        {% endif %}
+
+            {% if search_form %}
+            <h1>¿Soy beneficiario?</h1>
+            <p> A través de este sitio, usted puede consultar si es beneficiario del subsidio de transporte para personas del SISB&Eacute;N.
+            <br><br>
+            <h1>Por favor, digite su identificación</h1>
+                <form name="form" action="{% url 'index' %}" method="post">
+                    {% csrf_token %}
+                    {{ search_form.as_p }}
+                    <input type="submit" value="Buscar" size="20" style="margin-top: 10px; margin-left: 0px;">
+                </form>
+
+                <script>
+                    window.addEventListener("load", function() {
+                      form.document.addEventListener("keypress", soloNumeros, false);
+                    });
+                    function soloNumeros(e){
+                        var key = window.event ? e.which : e.keyCode;
+                        //if (key < 48 || key > 57) {
+                        if ((key > 47 && key < 58)||
+                            (key > 64 && key < 91)||
+                            (key > 96 && key < 123)){
+                            
+                        }else{
+                            e.preventDefault();
+                        }
+                    }
+                    
+                    
+                </script>
+            {% endif %}
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

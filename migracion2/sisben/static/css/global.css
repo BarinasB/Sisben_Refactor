@@ -1,0 +1,1139 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*reset styles*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1.0;
+    margin: 0 auto;
+    height:100%;
+    width:100%
+}
+body, td, pre {
+    font-family: ubunturegular;
+    font-size: 11px;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+img {border: 0 none}
+
+.clearfix {
+    *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: "";
+}
+.clearfix:after {
+    clear: both;
+}
+
+/*end of reset styles*/
+
+/*fuentes*/
+@font-face {
+    font-family: 'ubunturegular';
+    src: url('fonts/ubuntu-r-webfont.eot');
+    src: url('fonts/ubuntu-r-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/ubuntu-r-webfont.woff') format('woff'),
+        url('fonts/ubuntu-r-webfont.ttf') format('truetype'),
+        url('fonts/ubuntu-r-webfont.svg#ubunturegular') format('svg');
+
+}
+
+/**/
+
+#tl_mainBanner{
+    width:921px;
+    margin:0 auto;
+    background:url(http://s3.amazonaws.com/pruebastullaveplus/Contenido/Medios/Imagenes/main_banner.jpg) no-repeat center top;
+    height:210px;}
+
+#tl_redes{
+    width:921px;
+    height:35px;
+    margin:0 auto;
+    padding:10px 0 10px 0
+}
+
+#tl_redes ul{
+    list-style:none;
+}
+
+#tl_redes ul li{
+    float:left;
+    padding-right:10px}
+
+#tl_registro{
+    width:380px;
+    position:relative;
+    margin: 0 auto;
+    text-align:right;
+    top:0px;
+    left:285px;
+    /*
+    display:none*/
+
+}
+
+#tl_registro img{padding-top:5px;
+                 float:left}
+
+#tl_registro label{
+    font:11px 'ubunturegular';
+    font-style:italic;
+    color:#D3D80C;
+    float:left;
+    margin:2px 0 0 8px;}
+
+#tl_registro input{
+    float:left;
+    border: 0 none;
+    color:#929FC4;
+    font-size:10px;
+    height:15px;
+    width:97px;
+    margin:3px 0 0 3px;
+    background:transparent}
+
+#tl_registro input:focus{
+    outline:0px;}
+
+.tl_usform{
+    margin-left:20px!important;}
+
+#tl_formregistro{
+    background:url(http://s3.amazonaws.com/pruebastullaveplus/Contenido/Medios/Imagenes/tl_bg_registro.jpg) center no-repeat;
+    width:185px;
+    height:48px;
+    float:left;
+    padding:7px 0 0 0px;}
+
+#tl_btn{float:left;
+        width:100px;
+        text-align:left}
+
+#tl_btn img{cursor:pointer}
+
+#tl_btn a{
+    font:12px 'ubunturegular';
+    font-style:italic;
+    color:#D2D80C}
+
+
+#tl_content_sitemap {width:921px;
+            margin:0px 0px 0px 115px;
+            color:#001e48;
+            font: 14px 'ubunturegular';
+            text-align:justify;
+            padding-top:10px;}
+#tl_content_sitemap h1 {
+    font:28px'ubunturegular';
+    color:#001e48;
+    font-style:italic;
+    margin:0;
+font-weight: bold;}
+#tl_content_sitemap span {
+    color:#D9D80E;
+    font-weight: bold;
+    }
+
+#tl_content_sitemap a{
+    color:#001e48;
+    text-decoration:none}
+
+#tl_content_sitemap a:hover{
+    color:#D9D80E;
+    }
+
+#tl_content{width:921px;
+            margin:0 auto;
+            color:#001e48;
+            font: 14px 'ubunturegular';
+            font-style:italic;
+            text-align:justify;
+            padding-top:10px;}
+
+    
+#tl_content h1 {
+    font:28px 'ubunturegular';
+    font-style:italic !important;
+    color:#001e48;
+    margin:0;  
+    font-weight: bold;}
+
+#tl_content span {
+    color:#D9D80E;
+    font-weight: bold;
+    font-style: italic !important;
+    }
+
+#tl_content a{
+    color:#001e48;
+    text-decoration:none}
+
+#tl_content a:hover{
+    color:#D9D80E;
+    }
+
+#tl_homeleft{
+}
+
+#tl_homeleft .tl_titulo{
+    margin:10px 0 10px 0}
+
+#tl_homeright{
+    width:580px;
+    float:right;
+
+}
+
+#tl_home_elipses{
+    padding:0px 0 20px 10px;
+    list-style:none}
+
+#tl_home_elipses img{
+    margin:0 0 10px 5px;
+    float:left}
+
+#tl_menu_inferior_contenedor{
+    width:920px;
+    padding-top: 15px;
+    margin:0 auto;
+    height: 30px;
+}
+.tl_menu_inferior_barra_flotante{
+    width:920px;
+    height: 30px;
+    padding-top: 10px;
+    margin:0 auto;
+    position:relative;
+    z-index: 1;
+    background-color:#FFFFFF;
+    left: 0;
+}
+.tl_menu_inferior_barra_fija{
+    width:920px;
+    height: 30px;
+    padding-top: 10px;
+    margin:0 auto;
+    position: fixed;
+    bottom: 0px;
+    z-index: 999;
+    background-color:#FFFFFF;
+}
+#tl_menu_inferior ul {
+    list-style:none}
+#tl_menu_inferior ul a{
+    color:#001e48;
+    font: 14px 'ubunturegular';
+    font-style:italic !important;
+    text-decoration:none;
+    font-weight: bold;
+
+}
+
+#tl_menu_inferior ul li{
+    float:left;
+    
+    background-position: 0px -19px; 
+    padding:0px 12px 0 20px;	
+}
+
+#tl_menu_inferior2{
+    padding-left:160px		
+}
+#tl_menu_inferior2 ul a{
+    color:#001e48;
+    font: 14px 'ubunturegular';
+    font-style:italic;
+    font-weight: bold;
+    text-decoration:none
+
+}
+
+#tl_menu_inferior2 ul li{
+    margin:20 0px -5px 5px;
+    padding-left: 20px;
+    list-style:none;
+    
+    background-position: 0px -19px; 
+    width:auto
+}
+
+#menu1{
+    position:relative;
+}
+#menu2{
+    position:relative;
+}
+#menu3{
+    position:relative;
+}
+
+#h1 {
+	color: #001e48;
+	font: 14px 'ubunturegular';
+	font-style: italic;
+	text-align: justify;
+}
+
+
+
+
+#tl_logos{
+    width:920px;
+    margin:0 auto;
+    padding:40px 0 0 5px;
+    color:red}
+
+#tl_logos img{float:left;}
+
+#tl_menu_secundario{
+    width:360px;
+    float:right;
+    text-align:left;
+    list-style:none;
+    padding-left: 10px;
+    text-
+}
+
+#tl_menu_secundario  li{
+    float:left;
+    width:150px;
+    height:30px;
+    padding:0 10px 0 20px;
+    
+    background-position: 0px -1px; 
+
+}
+
+#tl_menu_secundario  li a{
+    font:11px 'ubunturegular';
+    font-style:italic;
+    font-weight: bold;
+    color:#001e48;
+    text-decoration: none}
+
+#tl_buscador{
+    width:170px;
+    margin:0 auto;
+    float:left;
+    padding-left:40px}
+
+#tl_buscador input{
+    font:14px 'ubunturegular';
+    font-style:italic;
+    color:#929FC4;
+    border:0 none;
+    background:url(http://s3.amazonaws.com/pruebastullaveplus/Contenido/Medios/Imagenes/buscador_bg.jpg) left no-repeat;
+    width:105px;
+    height:25px;
+    padding:5px;
+    margin:10px 0 0 0;
+    float:left}
+
+#tl_buscador input:focus{
+    outline:0px;}
+
+#tl_buscador img{
+    float:left;
+    margin-top:11px}
+
+
+#tl_contador{
+    margin:0 auto;
+    float:left;
+    background:url(http://s3.amazonaws.com/pruebastullaveplus/Contenido/Medios/Imagenes/contador_bg.jpg) center no-repeat;
+    width:135px;
+    height:22px;
+    padding:8px 5px 5px 5px;
+    margin:10px 15px 0 0;
+    font:14px 'ubunturegular';
+    font-style:italic;
+    color:#001e48;}
+
+
+
+/*Estilos obtener*/
+
+#tl_BannerInt{
+    margin:0 auto;
+    width:921px;
+    height:210px;
+    text-align:center}
+
+#tl_menuInt{
+    width:921px;
+    margin:0 auto;
+    text-align:right;
+    float:none;
+    position:relative;
+    z-index:999;
+    clear:left;
+    top:-63px}
+
+#tl_menuInt ul{
+    list-style:none;
+    float:right;
+    margin:0 0 20px 0}
+
+#tl_menuInt ul li {
+    float:left;
+    height:51px;
+    width:170px;
+    text-align:center;
+}
+
+#tl_menuInt ul li a {
+    color:#ffffff;
+    font:16px 'ubunturegular';
+    font-style:italic;
+    text-decoration:none;
+    height:39px;
+    display:block;
+    padding-top:12px;
+    font-weight: bold;}
+
+.btn_green1{
+    background:url(http://s3.amazonaws.com/pruebastullaveplus/Contenido/Medios/Imagenes/btn_green1.png);
+    position:relative;
+    z-index:5;}
+
+.btn_green2{
+    background:url(http://s3.amazonaws.com/pruebastullaveplus/Contenido/Medios/Imagenes/btn_green2.png);
+    position:relative;
+    z-index:4;
+    left:-12px;}
+
+.btn_blue1{
+    background:url(http://s3.amazonaws.com/pruebastullaveplus/Contenido/Medios/Imagenes/btn_blue1.png);
+    position:relative;
+    z-index:5;
+}
+
+.btn_blue2{
+    background:url(http://s3.amazonaws.com/pruebastullaveplus/Contenido/Medios/Imagenes/btn_blue2.png);
+    position:relative;
+    z-index:4;
+    left:-12px;}
+
+.btn_blue3{
+    background:url(http://s3.amazonaws.com/pruebastullaveplus/Contenido/Medios/Imagenes/btn_blue2.png);
+    position:relative;
+    z-index:3;
+    left:-24px;}
+
+#tl_Intleft{
+}
+
+#tl_Intright{
+    float:right;
+    width:400px;
+}
+
+.e_solicita{
+    margin-left:70px;}
+
+#tl_tipostarjeta{
+    margin-left:20px;
+    width:377px;
+    min-height:286px;
+    background:url(http://s3.amazonaws.com/pruebastullaveplus/Contenido/Medios/Imagenes/bg_tipotarjeta.jpg) center no-repeat;
+}
+#list_tipostarjeta{
+    width:190px;
+    padding:90px 0 0 10px;}
+
+#list_tipostarjeta img{
+    margin-bottom:2px}
+
+.one_col{
+    width:100%}
+
+#logo_left{
+    width:920px;
+    margin:0 auto;
+    position:relative;
+    margin-bottom:-62px;
+    background:transparent;
+}
+
+#logo_right{
+    width:921px;
+    margin:0 auto;
+    position:relative;
+    text-align:right;
+    top:65px;
+    padding-right:35px;
+
+
+}
+
+
+
+
+/*estilo cuadros de mensaje, alterar posicionamiento segÃºn necesidad*/
+
+.tl_mensaje{
+    position:absolute;
+    top:400px;
+    left:800px;
+    /**/
+    background: url(http://s3.amazonaws.com/pruebastullaveplus/Contenido/Medios/Imagenes/img_msj.png) no-repeat 7% 90% #D9D80E;
+    padding:3px 10px 2px 55px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color:#fff;
+
+}
+
+/*estilos ventana emergente resultados de bÃºsqueda*/
+
+/* Base Superbox Styles */
+#superbox-overlay{position:fixed;top:0;left:0;z-index:9998;width:100%;height:100%;}
+#superbox-wrapper{position:fixed;z-index:9999;top:0;display:table;width:100%;height:100%;}
+#superbox-container{position:relative;display:table-cell;width:100%;height:100%;margin:0;padding:0;vertical-align:middle;}
+#superbox{margin:0 auto;padding:0;}
+#superbox-container .loading{margin:0;text-align:center;}
+
+/* IE7 */
+*:first-child+html #superbox-container{position:absolute;top:50%;display:block;height:auto;}
+*:first-child+html #superbox{position:relative;top:-50%;display:block;}
+/* IE6 - Thanks to Thickbox for IE expressions */
+* html #superbox-container{position:absolute;top:50%;display:block;height:auto;}
+* html #superbox{position:relative;top:-50%;display:block;}
+* html #superbox-overlay{position:absolute;height:expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight + 'px' : document.body.offsetHeight + 'px');}
+* html #superbox-wrapper{position:absolute;margin-top:expression(0 - parseInt(this.offsetHeight / 2) + (document.documentElement && document.documentElement.scrollTop || document.body.scrollTop) + 'px');}
+
+/* Default Theme */
+#superbox-overlay{background:#000;}
+#superbox-container .loading{width:32px;height:32px;margin:0 auto;text-indent:-9999px;background:url(http://s3.amazonaws.com/pruebastullaveplus/Contenido/Medios/Imagenes/loader.gif) no-repeat 0 0;}
+#superbox{padding:10px;background:#fff; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;}
+#superbox-innerbox{padding:10px 0;}
+#superbox.image{text-align:center;}
+#superbox .close,
+#superbox .nextprev{overflow:hidden;margin:0;}
+#superbox .close {
+position: absolute;
+left: 930px;
+}
+#superbox .close a{float:right;background:#D9D80E;cursor:hand;
+                   padding:5px;
+                   -webkit-border-radius: 5px;
+                   -moz-border-radius: 5px;
+                   border-radius: 5px;
+                   font:14px 'ubunturegular';
+                   font-style:italic;
+                   margin-top:10px
+}
+#superbox .close a span{color:#fff;}
+
+#tl_buscadorInt{
+    width:450px;
+    margin:0 auto;
+    float:left;
+    padding-left:40px}
+
+#tl_buscadorInt input{
+    font:14px 'ubunturegular';
+    font-style:italic;
+    color:#929FC4;
+    border:0 none;
+    background:url(http://s3.amazonaws.com/pruebastullaveplus/Contenido/Medios/Imagenes/buscador_bg_long.jpg) left no-repeat;
+    width:350px;
+    height:25px;
+    padding:5px;
+    margin:10px 0 0 0;
+    float:left}
+
+#tl_buscadorInt input:focus{
+    outline:0px;}
+
+#tl_buscadorInt img{
+    float:left;
+    margin-top:11px}
+
+#tl_ventana_resultados{
+    font: 14px 'ubunturegular';
+    font-style:italic;
+    color:#001e48;
+    margin: 20px 0 20px 0px;
+    padding-left:50px;
+    height:350px;
+    overflow:auto}
+
+#tl_ventana_resultados h1{
+    font:18px'ubunturegular';
+    font-style:italic;
+    margin:0px 0 5px 0}
+
+#tl_ventana_resultados a{
+    color:#001e48}	
+
+#tl_ventana_resultados span{
+    color:#D9D80E}
+
+#tl_ventana_resultados ul li {
+    list-style-image:url(http://s3.amazonaws.com/pruebastullaveplus/Contenido/Medios/Imagenes/list_img.jpg);
+
+    padding:10px 0}
+
+
+/* estilos formularios*/
+
+#tl_solicitarTullave table{
+    margin:0 auto;
+}
+
+th {
+    font:25px'ubunturegular';
+    font-style:italic;
+    color:#001e48;
+    height:50px;
+    padding-top:10px;
+}
+td{padding:5px}
+
+tr{height:50px}
+
+#tl_solicitarTullave input[type="text"]{
+    background:url(http://s3.amazonaws.com/pruebastullaveplus/Contenido/Medios/Imagenes/input_bg.png) no-repeat;
+    width:170px;
+    height:24px;
+    padding:5px;
+    border:0 none;
+    font:14px 'ubunturegular';
+    font-style:italic;
+    color:#929FC4;}
+
+#tl_solicitarTullave input:focus, select:focus{
+    outline:none}
+
+
+#tl_solicitarTullave select{
+    width:175px;
+    height:34px;
+    padding:5px;
+    border:1px solid #7495B8;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font:14px 'ubunturegular';
+    font-style:italic;
+    color:#929FC4;}
+
+.table_color{
+    background:#F7F7F7}
+
+.tl_enviar {
+    background:#001e48;
+    border:0 none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;;
+    width:90px;
+    padding:5px;
+    cursor:pointer;
+    font:16px 'ubunturegular';
+    font-style:italic;
+    color:#fff;}
+
+
+/*estilos para el mapa*/
+
+#tl_mapBanner{
+    width:950px;
+    height:80px;
+    margin:0 auto;
+    background:url(http://s3.amazonaws.com/pruebastullaveplus/Contenido/Medios/Imagenes/map_banner.png);
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    z-index:9}
+
+#tl_map_menu{
+    width:950px;
+    height:37px;
+    margin:0 auto;
+    background:url(http://s3.amazonaws.com/pruebastullaveplus/Contenido/Medios/Imagenes/map_nav_bg.png);
+    position:absolute;
+    top:80px;
+    left:0;
+    right:0;
+    z-index:9
+}
+
+#tl_map_menu ul {
+    list-style: none;
+    padding:8px 0 0 22px}
+
+#tl_map_menu ul li {
+    float:left;
+    background:url(http://s3.amazonaws.com/pruebastullaveplus/Contenido/Medios/Imagenes/list_map.png) no-repeat;
+    background-position:0 -1px;
+    padding:0 20px}
+
+#tl_map_menu ul li a {
+    font:16px 'ubunturegular';
+    font-style:italic;
+    color:#001e48;
+    font-weight: bold;
+    text-decoration:none
+}
+
+#tl_map{
+    width:100%;
+    height:100%;
+    height:700px;
+    background:url(http://s3.amazonaws.com/pruebastullaveplus/Contenido/Medios/Imagenes/img_map.jpg) repeat;
+    background-size:cover}
+
+#tl_logoswrapper{
+    width:100%;
+    background:#fff;
+    height:auto;	
+    position:absolute;
+    left:0;
+    right:0;
+    color:green !important;
+    bottom:0}	
+
+#tl_logos_mapa{
+    width:920px;
+    margin:0 auto;
+    padding:10px 0 0 20px;
+}
+
+#tl_logos_mapa img{float:left;}
+
+
+/* ------------------------------------------------------------
+Reset Styles (from meyerweb.com)
+------------------------------------------------------------ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+color:#001e48;
+font-weight: inherit;
+font-style: normal;
+font-size: 100%;
+font-family: inherit;
+vertical-align: top ;
+}
+URL del artículo: http://www.ejemplode.com/18-css/509-ejemplo_de_justificar,_centrar_y_alinear_a_la_derecha_con_css.html
+Fuente: Ejemplo de Justificar, centrar y alinear a la derecha con CSS
+.clear { clear: both; height: 1px; overflow: hidden; }
+body {
+	background: white;
+	font-color:#001e48;
+	color:#001e48 !importantt;
+	font-family: ubunturegular;
+	font-style: normal ;
+    font-size: 13px;
+	line-height: 1;
+	text-align: center;
+}
+#logo { position: absolute; top: 2px; left: 15px; width: 152px; height: 42px; }
+#logo a { display: block; width: 100%; height: 100%; text-indent: -9999em; }
+/* Social */
+.social { height: 18px; text-align: center; padding: 3px; background: white; position: absolute; top: 5px; -moz-border-radius: 3px; -webkit-border-radius: 3px; overflow: hidden; }
+#tweetmeme { right: 280px; width: 70px; }
+#digg { right: 360px; width: 80px; }
+/* Help*/
+#help { position: absolute; top: 10px; right: 20px; }
+#helpbutton { color: white; font-weight: bold; font-size: 16px; }
+#helpcontents { position: absolute; top: 10px; right: -10px; width: 305px; height: 0px; padding: 45px 20px; background: url('imgs/help.png'); }
+#helpnav { display: block; border-bottom: 1px solid #ddd; height: 26px; }
+#helpnav li { float: left; padding: 3px 8px; margin: 0 2px 0 0; background: #eee; height: 20px; line-height: 20px; }
+#helpnav li.selected { background: #ddd; }
+#helpnav li a { color: #999; font-weight: bold; }
+#helpnav li a:hover, #helpnav li.selected a { color: black; }
+#helpsections { }
+#helpsections li { display: none; color: #333; line-height: 18px; padding: 8px; }
+#helpsections li.selected { display: block; }
+#helpsections li p { margin: 9px 0; }
+#closebutton { position: absolute; bottom: 18px; right: 11px; text-decoration: none; font-weight: bold; color: white; }
+#container { position: relative; margin-top: -4px; padding: 20px 0; }
+h2.blocktitle { background: none; font-size: 28px; font-weight: bold; color: black; line-height: 30px; margin: 0; padding: 0; z-index: 1; }
+#sitemap { position: relative; background: white; margin: 0 280px 0 15px; }
+#message { position: absolute; top: 25px; right: 300px; border: 2px solid #E9E9E9; background: #F7F7F7; padding: 4px; color: #717171; z-index: 2; font-size: 12px; }
+#message.saved { background: #FFFBD5; border: 2px solid #EFE097; color: #000; font-weight: bold; }
+#message.saved a { color: #00F; text-decoration: underline; content: none; text-transform: normal; display: inline; }
+#editor { width: 245px; float: right; margin: 0; padding: 0 15px;}
+#naveditor { margin: 10px 0 0 0; padding: 2px; width: 235px; border: 1px solid #C9C9C9; color: #333; }
+#simplehelp { margin: 5px 0 0 0; color: #333; }
+#print, #save { float: left; display: block; margin: 3px 2px; width: 118px; height: 29px; line-height: 300px; overflow: hidden; }
+#print { background: url('imgs/print.png'); }
+#save { background: url('imgs/save.png'); }
+#save.ready { background: url('imgs/save-over.png'); }
+#save:hover { cursor: text; }
+#save.ready:hover { cursor: pointer; cursor: hand; }
+#credit { position: absolute; bottom: -10px; right: 20px; }
+#credit img { position: relative; top: 3px; }
+
+#editor, #help { display: none; }
+#sitemap, #primaryNav { margin: 0; padding: 0; 
+    font-size:11;}
+
+
+
+/* ------------------------------------------------------------
+NUMBER OF COLUMNS: Adjust #primaryNav li to set the number
+of columns required in your site map. The default is
+4 columns (25%). 5 columns would be 20%, 6 columns would
+be 16.6%, etc.
+------------------------------------------------------------ */
+
+#primaryNav li {
+width:25%;
+position:relative;
+}
+#primaryNav li ul li {
+width:100% !important;
+
+}
+/* ------------------------------------------------------------
+General Styles
+------------------------------------------------------------ */
+.sitemap {
+margin: 0 0 40px 0;
+float: left;
+width: 100px;
+
+}
+a {
+text-decoration: none;
+font-color=#000000;
+}
+ol, ul {
+list-style: none;
+}
+/* ------------------------------------------------------------
+Site Map Styles
+------------------------------------------------------------ */
+/* -------- Top Level --------- */
+#primaryNav {
+margin: 45px 0 0 0;
+float: left;
+position:static;
+width: 100%;
+}
+#primaryNav li:first-child {
+display: block;
+float: none;
+background: #ffffff url('images/L1-left.png') center bottom no-repeat;
+position: relative;
+z-index: 2;
+padding: 0 0 30px 0;
+}
+#primaryNav li {
+float: left;
+background: url('images/L1-center.png') center top no-repeat;
+padding: 30px 0;
+margin-top: -30px;
+}
+#primaryNav li a {
+margin: 0 20px 0 0;
+padding: 10px 0;
+display: block;
+font-size: 12px;
+font-family: ubunturegular;
+font-style: italic;
+font-weight: bold;
+text-align: center;
+color: #001e48;
+position:relative;
+background: #ffffff  top left repeat-x;
+border: 2px solid #001e48;
+-moz-border-radius: 0px;
+-webkit-border-radius: 0px;
+-webkit-box-shadow: rgba(0,0,0,1.5) 3px 3px 3px;
+-moz-box-shadow: rgba(0,0,0,1.5) 3px 3px 3px; /* FF 3.5+ */
+width: 90%;
+float: left;
+}
+#primaryNav li a:hover {
+background-color: #ffffff;
+font-size: 12px;
+font-family: ubunturegular;
+font-style: italic;
+color: #001e48;
+font-weight: bold;
+border-color: #001e48;
+width: 90%;
+}
+#primaryNav li:last-child {
+background: url('images/L1-right.png') center top no-repeat;
+}
+#primaryNav a:link:before,
+#primaryNav a:visited:before {
+display: block;
+font-size: 1px;
+color:#ffffff;
+margin-bottom: 5px;
+word-wrap: break-word;
+}
+#primaryNav li a:link:before,
+#primaryNav li a:visited:before {
+color: #78a9c0;
+}
+/* -------- Second Level --------- */
+#primaryNav li li, #primaryNav li li:first-child {
+width: 100%;
+clear: left;
+margin-top: 0;
+padding: 10px 0 0 0;
+position:relative;
+background: url('images/vertical-line.png') center bottom repeat-y;
+}
+#primaryNav li li a {
+background-color: #ffffff;
+border: 2px solid #ADD02E;
+font-size: 12px;
+font-family: ubunturegular;
+font-style: italic;
+font-weight:normal;
+color:#001e48;
+padding: 5px 0;
+width: 90%;
+float: left;
+}
+#primaryNav li li a:focus {
+border-color: #001e48;
+background-color: #001e48;
+font-size: 12px;
+font-family: ubunturegular;
+font-style: italic;
+font-weight:normal;
+width: 90%;
+}
+#primaryNav li li:first-child {
+padding-top: 30px;
+}
+#primaryNav li li:last-child {
+background: url('images/vertical-line.png') center bottom repeat-y;
+}
+#primaryNav li li a:link:before,
+#primaryNav li li a:visited:before {
+color: #DBE9FC;
+}
+/* -------- Third Level --------- */
+#primaryNav li li ul {
+margin: 10px 0 0 0;
+width: 100%;
+float: right;
+padding: 9px 0 10px 0;
+background: #ffffff url('images/L3-ul-top.png') center top no-repeat;
+}
+#primaryNav li li li{
+background: url('images/L3-center.png') left center no-repeat;
+padding: 5px 0;
+}
+#primaryNav li li li a {
+background: #ffffff  top left repeat-x;
+border: 2px solid #CDDD8B;
+font-size: 12px;
+font-family: ubunturegular;
+font-style: italic;
+font-weight:normal;
+color: #001e48;
+padding: 5px 0;
+width: 70%;
+float: right;
+}
+#primaryNav li li li a:hover {
+background-color: #ffffff;
+border-color: #001e48;
+font-size: 12px;
+font-family: ubunturegular;
+font-style: italic;
+font-weight:normal;
+width: 70%;
+float: right;
+}
+#primaryNav li li li:first-child {
+padding: 15px 0 5px 0;
+padding-top: 15px;
+float: left;
+background: url('images/L3-li-top.png') left center no-repeat;
+}
+#primaryNav li li li:last-child {
+background: url('images/L3-bottom.png') left  no-repeat;
+}
+#primaryNav li li li a:link:before,
+#primaryNav li li li a:visited:before {
+color: #ccae14;
+font-size: 9px;
+}
+/* ------------------------------------------------------------
+Utility Navigation
+------------------------------------------------------------ */
+#utilityNav {
+float: left;
+max-width: 60%;
+margin-right: 10px;
+}
+#utilityNav li {
+float: left;
+margin-bottom: 10px;
+}
+#utilityNav li a {
+margin: 0 10px 0 0;
+padding: 5px 10px;
+display: block;
+border: 2px solid #e3ca4b;
+font-size: 12px;
+font-weight: bold;
+text-align: center;
+color: black;
+background: #fff7aa url('images/white-highlight.png') top left repeat-x;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-webkit-box-shadow: rgba(0,0,0,0.5) 2px 2px 2px;
+-moz-box-shadow: rgba(0,0,0,0.5) 2px 2px 2px; /* FF 3.5+ */
+float: left;
+}
+#utilityNav li a:hover {
+background-color: #fffce5;
+border-color: #d1b62c;
+}
+#utilityNav li a:link:before,
+#utilityNav li a:visited:before {
+color: #;
+font-size: 9px;
+margin-bottom: 3px;
+}
+#utilityNav li li a:focus {
+background-color: #000000;
+border-color: #d1b62c;
+font-size: 12px;
+}
+#utilityNav li li li a:focus {
+background-color: #000000;
+border-color: #d1b62c;
+font-size: 12px;
+}
+#tablacentral
+{
+	width:1000px;
+	height:auto;
+	left:10px;
+	top:100px;
+}
+
+/* Estilo personalizado de toda etiqueta label */
+label
+{
+    float: left;
+    text-align: right;
+    margin-top: 5px;
+    margin-right: 15px;
+    width: 155px;
+}
+
+/* Estilo personalizado para todo parrafo dentro de los formularios */
+form p
+{
+    margin-top: 8px;
+}
+
+/* Estilo personalizado para las etiquetas label dentro de un formulario */
+form label
+{
+    text-align: left;
+}
+
+/* Disenio de los botones para volver al inicio */
+a#b_back {
+    border: 1px solid #18ab29;
+    background-color: #d7d812;
+    padding: 10px 31px;
+    border-radius: 11px;
+    display: inline-block;
+    text-shadow: 0px 1px 1px #2f6627;
+    box-shadow: 3px 4px 0px 0px #b9b547;
+}
+
+a#b_back:hover {
+    background-color: #001e48;
+    box-shadow: 0px 0px 0px 0px;
+}
+
+/* Disenio de los botones para consultar 
+input#b_confirm {
+    border: 1px solid #18ab29;
+    background-color: #d7d812;
+    padding: 10px 31px;
+    border-radius: 11px;
+    display: inline-block;
+    text-shadow: 0px 1px 1px #2f6627;
+    box-shadow: 3px 4px 0px 0px #b9b547;
+    font-family: "ubunturegular";
+    font-weight: italic;
+    font-size: 14px;
+}
+
+input#b_confirm:hover {
+    background-color: #001e48;
+    box-shadow: 0px 0px 0px 0px;
+    color: #d7d812;
+}*/

@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="tl_content">
+    <div id="tl_Intleft">
+        <h1>¿Soy beneficiario?</h1> <br><hr><br>
+
+        {% if MSG_NOAP %}
+		<br><p>Para el punto {{ place.name  }}, el {{ day_url|date:"l j \d\e F" }} <b>las citas están agotadas.</b> </p>
+                <br><br>
+                <p><a id="b_back" href="">Volver al Inicio</a></p>
+        {% endif %}
+
+        {% if MSG_PND %}
+		<br><p>El punto <b>{{ place.name  }}</b>, no esta disponible para el dia {{ day_url|date:"l j \d\e F" }}.</p>
+                <br><br>
+                <p><a id="b_back" href="">Volver al Inicio</a></p>
+        {% endif %}
+
+        {% if appointment_step1_form %}
+            <br>Por favor seleccione un punto de SISB&Eacute;N para agendar su cita.</span><br><br>
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ appointment_step1_form.as_p }}
+                <br>
+                <input type="submit" value="Ver disponibilidad" size="20">
+            </form>
+            <br><br>
+            <p><a id="b_back" href="">Volver al Inicio</a></p>
+        {% endif %}
+        {% if appointment_step2_form %}
+            <form action="{% url 'appointment-step3' place_url=place_url day_url=day_url %}" method="POST">
+                {% csrf_token %}
+                {{ appointment_step2_form.as_p }}
+                <!-- <input type="submit" formaction="escenario1b.html" value="Regresar" size="20">  -->
+                <br>
+                <input type="submit" value="Asignar esa cita" size="20">
+            </form>
+            <br><br>
+            <p><a id="b_back" href="">Volver al Inicio</a></p>
+        {% endif %}
+        {% if done %}
+            <p>Su cita fue programada para el {{ appointment_date|date:"l j \d\e F" }} en el {{ rendezvous }} a las {{ appointment_date|time:"h:i a" }}</p><br>
+            <p>No olvide llevar su documento de identificación, pues sin él, no podrá recibir su tarjeta <i>tullave</i>, recuerde este tramite es personal.</p>
+            <p>Estimado Usuario, para completar el proceso de registro, por favor diligenciar el siguiente <span><b> <a href='http://www.tullaveplus.com/solicitud' target='blank'>formulario</a></b></span> con sus datos, por favor tener presente seleccionar en el campo <i>Población Especial</i> la opción de <i>SISBÉN</i>, y en el campo <i>Puntos de personalización</i> la opción de  <i>PUNTO SISBÉN</i>.<br> Muchas Gracias.
+            </p>
+            <br><br>
+            <p><a id="b_back" href="">Volver al Inicio</a></p>
+        {% endif %}
+        {% if error_on_schedule %}
+            Error
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
